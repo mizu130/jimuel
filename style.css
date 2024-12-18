@@ -1,0 +1,32 @@
+body { 
+    text-align: center;
+    background-color:gray;
+}
+
+img{ 
+    border-radius: 110px;
+}
+
+th, td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+
+  .card {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    margin-top: 20px;
+    border-radius: 35px;
+    padding: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 20px;    
+}

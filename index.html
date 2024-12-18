@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("wew.jpg");
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+        #personal-info{
+            background-color: orange;
+        }
+        #summary{
+            background-color: orange;
+        }
+        #education{
+            background-color: orange;
+        }
+        #skills{
+            background-color: orange;
+        }
+        #work-experience{
+            background-color: orange;
+        }
+
+        .navbar {
+            background-color: orange;
+            color: black;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 1rem auto;
+            padding: 1.5rem;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        img {
+            display: block;
+            margin: 1rem auto;
+            border-radius: 50%;
+            animation: zoomIn 2s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+         table td {
+            color: #070daa;
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        table th {
+            background-color: orange;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        h1, h3 {
+            color: #444;
+            text-align: center;
+        }
+
+        p { 
+            color: #070daa;
+            margin: 1rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+            animation: slideInUp 1.5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #skills {
+            font-style: oblique;
+            font-weight: bold;
+        }
+
+        p {
+            font-style: oblique;
+            font-weight: bold;
+        }
+
+        #education {
+            font-style: oblique;
+            font-weight: bold;
+        }
+        #personal-info h1, 
+#personal-info h3 {
+    color: #070daa; /* Gamitin ang gusto mong kulay */
+}
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const cards = document.querySelectorAll(".card");
+            cards.forEach((card) => observer.observe(card));
+        });
+    </script>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>
+            <a href="https://www.facebook.com/jimuel.abdon.2024">Facebook</a>
+            <a href="https://www.instagram.com/stlybsoowel/profilecard/">Instagram</a>
+            <a href="https://www.tiktok.com/@urfavwel11?_t=8sCPZnys1Bp&_r=1">Tiktok</a>
+        </div>
+    </div>
+
+    <img src="images/wel.jpg" width="200px" alt="Portrait of Abdon Jimuel Balmes">
+   
+   
+ <h1><i>PERSONAL INFORMATION</i></h1>
+    <div id="personal-info" class="card personal-info">
+        <div class="wewe">
+        <h3><strong>Abdon Jimuel Balmes</strong></h3>
+        <h3><strong>Nagtaluntong, Lobo, Batangas 4229</strong></h3>
+        <h3>+639754604383</h3>
+        <h3>abdon.jimuel.c210475@gmail.com</h3>
+        </div>
+    </div>
+    
+    
+     <h1><i>Summary</i></h1>
+    <div id="summary" class="card">
+        <p style="color:#070daa">
+            I’m Wel, a gamer who loves exploring new worlds, leveling up, and having fun. This is where I share my gaming adventures, favorite moments, and anything else I’m passionate about.
+            <br><br>
+            Thanks for stopping by—let’s play sometime! 🎮
+        </p>
+    </div>
+
+    <h1><i>Education</i></h1>
+    <div id="education" class="card">
+        <table>
+            <thead>
+                <tr>
+                    <th>School</th>
+                    <th>Section</th>
+                    <th>Year Graduated</th>
+                    <th>Strand</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nagtaluntong Elementary School</td>
+                    <td>Section A</td>
+                    <td>2014</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Masaguitsit Banalo National High School</td>
+                    <td>Section C</td>
+                    <td>2018</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Lobo Senior High School</td>
+                    <td>Amethyst</td>
+                    <td>2020</td>
+                    <td>HUMSS</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Westmead International School</td>
+                    <td>411</td>
+                    <td>2025</td>
+                    <td></td>
+                    <td>BSIT</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1><i>Technical Skills</i></h1>
+    <div id="skills" class="card">
+        <ul style="color: #070daa;">
+            <p>Photo Shop</p>
+            <p>MS Word, Excel</p>
+            <p>Recording, Voicemail</p>
+        </ul>
+    </div>
+
+    <h1><i>Work Experience</i></h1>
+    <div id="work-experience" class="card">
+        <ul style="color: #070daa;">
+            <p>Web Developer (2016-2018)</p>
+            <p>Data Analyst (2017-2019)</p>
+            <p>Technical Support (2020-2021)</p>
+        </ul>
+    </div>
+
+    <h1>Seminars</h1>
+    <div id="skills" class="card">
+        <p>ISITE</p>
+        <p>BITS-2023</p>
+        <p>JARVIS</p>
+        <p>HACKIN KNL</p>
+        <p>Y4IT RESEARCH</p>
+        <p>BITS-2024</p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Abdon Jimuel Balmes. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
